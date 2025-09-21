@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test PDF Upload</title>
+</head>
+<body>
+    <h1>Test PDF Upload</h1>
+    <input type="file" id="fileInput" accept=".pdf">
+    <button onclick="testUpload()">Upload Test</button>
+    <div id="result"></div>
+
+    <script>
+        async function testUpload() {
+            const fileInput = document.getElementById('fileInput');
+            const result = document.getElementById('result');
+
+            if (!fileInput.files[0]) {
+                result.innerHTML = 'Please select a file first';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            try {
+                result.innerHTML = 'Uploading...';
+                const response = await fetch('http://localhost:8000/upload-pdf', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    result.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                } else {
+                    result.innerHTML = 'Error: ' + response.status + ' ' + response.statusText;
+                }
+            } catch (error) {
+                result.innerHTML = 'Network Error: ' + error.message;
+                console.error('Upload error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+CHASE CREDIT CARD STATEMENT
+Account Number: ****1234
+Statement Date: 01/15/2024
+Payment Due Date: 02/10/2024
+New Balance: $1,234.56
+
+TRANSACTIONS:
+01/02 STARBUCKS STORE #1234           5.67
+01/05 AMAZON.COM*ABCD1234            29.99
+01/08 SHELL OIL #5678                45.50
+01/12 PAYMENT THANK YOU             -100.00
+01/15 ANNUAL FEE                     95.00

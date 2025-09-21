@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout:*)",
+      "Bash(python test:*)",
+      "Bash(./venv/Scripts/activate)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(curl:*)",
+      "Read(//c/Users/marti/Downloads/**)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(del test_banco_nacion_parser.py)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
